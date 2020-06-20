@@ -49,20 +49,34 @@ void print_board(int board[BOARD_HEIGHT][BOARD_WIDTH]){
         } 
 }
 
+void default_board(int board[BOARD_HEIGHT][BOARD_WIDTH]){
+        board[12][49] = board[12][48] = board[11][49] = board[13][49] = board[11][50] = 1;
+        board[37][49] = board[37][48] = board[36][49] = board[38][49] = board[36][50] = 1;
+        board[12][149] = board[12][148] = board[11][149] = board[13][149] = board[11][150] = 1;
+        board[37][149] = board[37][148] = board[36][149] = board[38][149] = board[36][150] = 1;
+}
+
 
 int main(){
         int BOARD[BOARD_HEIGHT][BOARD_WIDTH] = {0};
         int num_houses;
-        printf("Enter number of houses: ");
+        printf("Enter number of houses(Enter 0 for default board): ");
         scanf("%d", &num_houses);
-        int x_temp, y_temp;
-        for (int i = 0; i < num_houses; i++){
-                printf("Enter x coordinate of %d house[0, %d]: ", i, BOARD_WIDTH);
-                scanf("%d", &x_temp);
-                printf("Enter y coordinate of %d house[0, %d]: ", i, BOARD_HEIGHT);
-                scanf("%d", &y_temp);
-                BOARD[y_temp][x_temp] = 1;
+        
+        if (num_houses == 0){
+                default_board(BOARD);
         }
+        else {
+                int x_temp, y_temp;
+                for (int i = 0; i < num_houses; i++){
+                        printf("Enter x coordinate of %d house[0, %d]: ", i, BOARD_WIDTH);
+                        scanf("%d", &x_temp);
+                        printf("Enter y coordinate of %d house[0, %d]: ", i, BOARD_HEIGHT);
+                        scanf("%d", &y_temp);
+                        BOARD[y_temp][x_temp] = 1;
+                }
+        }
+        
         while(1){
                 print_board(BOARD);
                 usleep(100000);
