@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<unistd.h>
 
-#define BOARD_WIDTH 150
+#define BOARD_WIDTH 200
 #define BOARD_HEIGHT 50 
 
 int num_neighbours(int board[BOARD_HEIGHT][BOARD_WIDTH], int y_pos, int x_pos){
@@ -65,7 +65,7 @@ int main(){
         }
         while(1){
                 print_board(BOARD);
-                usleep(500000);
+                usleep(100000);
                 fflush(stdout);
                 advance_board(BOARD);
         }
