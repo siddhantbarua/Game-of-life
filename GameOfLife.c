@@ -38,7 +38,7 @@ void print_board(int board[BOARD_HEIGHT][BOARD_WIDTH]){
         for (int j = 0; j < BOARD_HEIGHT; j++){
                 for (int i = 0; i < BOARD_WIDTH; i++){
                         if (board[j][i] == 0){
-                                printf("-");
+                                printf(" ");
                         }
                         else if (board[j][i] == 1){
                                 printf("o");
