@@ -54,6 +54,9 @@ void default_board(int board[BOARD_HEIGHT][BOARD_WIDTH]){
         board[37][49] = board[37][48] = board[36][49] = board[38][49] = board[36][50] = 1;
         board[12][149] = board[12][148] = board[11][149] = board[13][149] = board[11][150] = 1;
         board[37][149] = board[37][148] = board[36][149] = board[38][149] = board[36][150] = 1;
+
+        board[26][101] = board [27][102] = board[28][102] = board[28][101] = board[28][100] = 1;
+        board[23][98] = board [22][97] = board[21][97] = board[21][98] = board[21][99] = 1;
 }
 
 
@@ -76,10 +79,11 @@ int main(){
                         BOARD[y_temp][x_temp] = 1;
                 }
         }
-        
+        print_board(BOARD);
+        sleep(2);
         while(1){
                 print_board(BOARD);
-                usleep(100000);
+                usleep(50000);
                 fflush(stdout);
                 advance_board(BOARD);
         }
