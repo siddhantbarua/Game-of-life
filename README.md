@@ -8,6 +8,5 @@ Conway's Game of Life is a cellular automation game devised by British mathemati
 3. Any live cell with more than three live neighbours dies, as if by overpopulation.
 4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 
-There are some fascinating patterns which emerge from certain initial conditions, some of which are listed here: https://pdfs.semanticscholar.org/ba77/59e4d871d09459e3751d110137a8434591f6.pdf
-
+There are some fascinating patterns which emerge from certain initial conditions.
 
